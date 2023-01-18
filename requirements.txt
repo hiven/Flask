@@ -1,5 +1,6 @@
 gunicorn
 flask
+dotenv
 
 black==22.12.0 ; python_version >= "3.9" and python_version < "4.0"
 certifi==2022.12.7 ; python_version >= "3.9" and python_version < "4"
