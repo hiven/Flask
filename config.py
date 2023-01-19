@@ -13,6 +13,7 @@ class Config:
     SECRET_KEY = environ.get("SECRET_KEY")
     FLASK_ENV = environ.get("FLASK_DEBUG")
     FLASK_APP = "wsgi.py"
+    CSRF_ENABLED = os.environ.get("CSRF_ENABLED")
 
     # Static Assets
     STATIC_FOLDER = "static"
@@ -20,3 +21,9 @@ class Config:
 
     # API
     BEST_BUY_API_KEY = environ.get("BEST_BUY_API_KEY")
+    
+    #DB
+    SQLALCHEMY_ECHO = SQLALCHEMY_ECHO = os.environ.get('SQLALCHEMY_ECHO') in ('1', 'True')
+    SQLALCHEMY_COMMIT_ON_TEARDOWN = os.environ.get("SQLALCHEMY_COMMIT_ON_TEARDOWN")
+    SQLALCHEMY_TRACK_MODIFICATIONS = os.environ.get("SQLALCHEMY_TRACK_MODIFICATIONS")
+    SQLALCHEMY_DATABASE_URI = os.environ.get("SQLALCHEMY_DATABASE_URI")
