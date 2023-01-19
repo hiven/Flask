@@ -1,5 +1,7 @@
+import os
+
 """Class-based Flask app configuration."""
-from os import environ, path
+from os import environ, path, getenv
 
 from dotenv import load_dotenv
 
